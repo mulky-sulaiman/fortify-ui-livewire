@@ -1,37 +1,39 @@
 {
-    "name": "zacksmash/fortify-ui",
-    "description": "Fortify-driven Laravel UI replacement",
+    "name": "mulky-sulaiman/fortify-ui-livewire",
+    "description": "Fortify-driven Laravel UI replacement with Livewire Support",
     "keywords": [
-        "zacksmash",
-        "fortify-ui"
+        "fortify",
+        "fortify-ui",
+        "livewire"
     ],
-    "homepage": "https://github.com/zacksmash/fortify-ui",
+    "homepage": "https://github.com/mulky-sulaiman/fortify-ui-livewire",
     "license": "MIT",
     "authors": [
         {
-            "name": "Zack Warren",
-            "email": "zachary.warren@me.com",
-            "homepage": "https://zacksmash.github.io",
+            "name": "Mulky Sulaiman",
+            "email": "mulky.sulaiman@gmail.com",
+            "homepage": "https://github.com/mulky-sulaiman/",
             "role": "Developer"
         }
     ],
     "require": {
-        "laravel/fortify": "^1.21"
+        "laravel/fortify": "^1.25.4",
+        "livewire/livewire": "^3.6.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.3",
-        "vimeo/psalm": "^3.11"
+        "friendsofphp/php-cs-fixer": "^3.70.1",
+        "orchestra/testbench": "^10.0.2",
+        "phpunit/phpunit": "^11.5.10",
+        "vimeo/psalm": "^6.8.8"
     },
     "autoload": {
         "psr-4": {
-            "Zacksmash\\FortifyUI\\": "src"
+            "MulkySulaiman\\FortifyUILivewire\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Zacksmash\\FortifyUI\\Tests\\": "tests"
+            "MulkySulaiman\\FortifyUILivewire\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,7 +48,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Zacksmash\\FortifyUI\\FortifyUIServiceProvider"
+                "MulkySulaiman\\FortifyUILivewire\\FortifyUILivewireServiceProvider"
             ]
         }
     },

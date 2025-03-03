@@ -1,13 +1,13 @@
 <?php
 
-namespace Zacksmash\FortifyUI\Tests;
+namespace MulkySulaiman\FortifyUILivewire\Tests;
 
+use MulkySulaiman\FortifyUILivewire\FortifyUILivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Zacksmash\FortifyUI\FortifyUIServiceProvider;
 
 class TestCase extends Orchestra
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
     }
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            FortifyUIServiceProvider::class,
+            FortifyUILivewireServiceProvider::class,
         ];
     }
 }

@@ -1,15 +1,15 @@
-<p  align="center"><img  src="https://github.com/zacksmash/fortify-ui/raw/master/fortify-ui-image.png"  width="400"></p>
+<p  align="center"><img  src="https://github.com/mulky-sulaiman/fortify-ui-livewire/raw/master/fortify-ui-image.png"  width="400"></p>
 
 # Introduction
 
 > [!NOTE]
 > For Laravel 10 and below, use branch v1.x
 
-**FortifyUI** is an unopinionated authentication starter, powered by [*Laravel Fortify*](https://github.com/laravel/fortify). It is completely unstyled -- on purpose -- and only includes a minimal amount of markup to get your project running quickly. This package can be used to start your project, or you can use the [*FortifyUI Preset Template*](https://github.com/zacksmash/fortify-ui-preset) which allows you to create your own preset that you can install with **FortifyUI**.
+**FortifyUILivewire** is an unopinionated authentication starter, powered by [*Laravel Fortify*](https://github.com/laravel/fortify). It is completely unstyled -- on purpose -- and only includes a minimal amount of markup to get your project running quickly. This package can be used to start your project, or you can use the [*FortifyUILivewire Preset Template*](https://github.com/MulkySulaiman/fortify-ui-preset) which allows you to create your own preset that you can install with **FortifyUILivewire**.
 
 
 ### In a nutshell...
-**FortifyUI** automates the base installation and configuration of *Laravel Fortify*, it includes the features that *Laravel Fortify* recommends implementing yourself and it provides the scaffolding for you to build your own UI around it. Hence, Fortify + UI.
+**FortifyUILivewire** automates the base installation and configuration of *Laravel Fortify*, it includes the features that *Laravel Fortify* recommends implementing yourself and it provides the scaffolding for you to build your own UI around it. Hence, Fortify + UI.
 
 ---
 
@@ -22,17 +22,17 @@
     - [Password Confirmation](#password-confirmation)
     - [Two-Factor Authentication](#two-factor-authentication)
     - [Update User Password/Profile](#update-user-passwordprofile)
-  - [FortifyUI Presets](#fortifyui-presets)
+  - [FortifyUILivewire Presets](#fortifyuilivewire-presets)
     - [Community Presets](#community-presets)
   - [License](#license)
 
 <a name="installation"></a>
 ## Installation
 
-To get started, you'll need to install **FortifyUI** using Composer. This will install *Laravel Fortify* as well so, please make sure you **do not** have it installed, already.
+To get started, you'll need to install **FortifyUILivewire** using Composer. This will install *Laravel Fortify* as well so, please make sure you **do not** have it installed, already.
 
 ```bash
-composer require zacksmash/fortify-ui
+composer require MulkySulaiman/fortify-ui
 ```
 
 Next, you'll need to run the install command:
@@ -41,14 +41,14 @@ Next, you'll need to run the install command:
 php artisan fortify:ui
 ```
 
-This command will publish **FortifyUI's** views, add the `home` route to `web.php` and add the **FortifyUI** service provider to your `app/Providers` directory. This will also publish the service provider and config file for *Laravel Fortify*. Lastly, it will register both service providers in the `app.php` config file, under the providers array.
+This command will publish **FortifyUILivewire's** views, add the `home` route to `web.php` and add the **FortifyUILivewire** service provider to your `app/Providers` directory. This will also publish the service provider and config file for *Laravel Fortify*. Lastly, it will register both service providers in the `app.php` config file, under the providers array.
 
 That's it, you're all setup! For advanced setup and configuration options, keep reading!
 
 <a name="configuration"></a>
 ## Configuration
 
-The **FortifyUI** service provider registers the views for all of the authentication features. If you'd rather **not** include the **FortifyUI** service provider, you can skip generating it by using the `--skip-provider` flag.
+The **FortifyUILivewire** service provider registers the views for all of the authentication features. If you'd rather **not** include the **FortifyUILivewire** service provider, you can skip generating it by using the `--skip-provider` flag.
 
 ```bash
 php artisan fortify:ui --skip-provider
@@ -97,11 +97,11 @@ Now, you should have all of the registered views required by *Laravel Fortify*, 
 <a name="features"></a>
 ## Features
 
-By default, **FortifyUI** is setup to handle the basic authentication functions (Login, Register, Password Reset) provided by *Laravel Fortify*.
+By default, **FortifyUILivewire** is setup to handle the basic authentication functions (Login, Register, Password Reset) provided by *Laravel Fortify*.
 
 <a name="features-email-verification"></a>
 ### Email Verification
-To enable the email verification feature, you'll need to visit the **FortifyUI** service provider and uncomment `Fortify::verifyEmailView()`, to register the view. Then, go to the `fortify.php` config file and make sure `Features::emailVerification()` is uncommented. Next, you'll want to update your `User` model to include the following:
+To enable the email verification feature, you'll need to visit the **FortifyUILivewire** service provider and uncomment `Fortify::verifyEmailView()`, to register the view. Then, go to the `fortify.php` config file and make sure `Features::emailVerification()` is uncommented. Next, you'll want to update your `User` model to include the following:
 
 ```php
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -117,11 +117,11 @@ This allows you to attach the `verified` middleware to any of your routes, which
 
 <a name="features-password-confirmation"></a>
 ### Password Confirmation
-To enable the password confirmation feature, you'll need to visit the **FortifyUI** service provider and uncomment `Fortify::confirmPasswordView()`, to register the view. This allows you to attach the `password.confirm` middleware to any of your routes, which is handled by the `password-confirm.blade.php` file.
+To enable the password confirmation feature, you'll need to visit the **FortifyUILivewire** service provider and uncomment `Fortify::confirmPasswordView()`, to register the view. This allows you to attach the `password.confirm` middleware to any of your routes, which is handled by the `password-confirm.blade.php` file.
 
 <a name="features-two-factor-auth"></a>
 ### Two-Factor Authentication
-To enable the two-factor authentication feature, you'll need to visit the **FortifyUI** service provider and uncomment `Fortify::twoFactorChallengeView()`, to register the view. Then, go to the `fortify.php` config file and make sure `Features::twoFactorAuthentication` is uncommented. Next, you'll want to update your `User` model to include the following:
+To enable the two-factor authentication feature, you'll need to visit the **FortifyUILivewire** service provider and uncomment `Fortify::twoFactorChallengeView()`, to register the view. Then, go to the `fortify.php` config file and make sure `Features::twoFactorAuthentication` is uncommented. Next, you'll want to update your `User` model to include the following:
 
 ```php
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -144,9 +144,9 @@ Features::updatePasswords(),
 ```
 
 <a name="presets"></a>
-## FortifyUI Presets
+## FortifyUILivewire Presets
 
-**FortifyUI** encourges make your own presets, with your favorite frontend libraries and frameworks. To get started, visit the [*FortifyUI Preset Template*](https://github.com/zacksmash/fortify-ui-preset) repository, and click the "Use Template" button.
+**FortifyUILivewire** encourges make your own presets, with your favorite frontend libraries and frameworks. To get started, visit the [*FortifyUILivewire Preset Template*](https://github.com/MulkySulaiman/fortify-ui-preset) repository, and click the "Use Template" button.
 
 ### Community Presets
 
@@ -154,4 +154,4 @@ Presets for v1.x can be found in that branch.
 
 ## License
 
-**FortifyUI** is open-sourced software licensed under the [MIT license](LICENSE.md).
+**FortifyUILivewire** is open-sourced software licensed under the [MIT license](LICENSE.md).

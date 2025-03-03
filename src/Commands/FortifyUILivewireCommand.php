@@ -1,17 +1,17 @@
 <?php
 
-namespace Zacksmash\FortifyUI\Commands;
+namespace MulkySulaiman\FortifyUILivewire\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
-class FortifyUICommand extends Command
+class FortifyUILivewireCommand extends Command
 {
     public $signature = 'fortify:ui {--skip-provider}';
 
-    public $description = 'Setup FortifyUI routes, service providers and views';
+    public $description = 'Setup FortifyUILivewire routes, service providers and views';
 
     public function handle()
     {
@@ -56,7 +56,7 @@ class FortifyUICommand extends Command
 
         if (! $this->option('skip-provider')) {
             ServiceProvider::addProviderToBootstrapFile(
-                \App\Providers\FortifyUIServiceProvider::class
+                \App\Providers\FortifyUILivewireServiceProvider::class
             );
         }
     }

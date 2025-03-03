@@ -1,6 +1,6 @@
 <?php
 
-namespace Zacksmash\FortifyUI\Tests;
+namespace MulkySulaiman\FortifyUILivewire\Tests;
 
 class ExampleTest extends TestCase
 {
